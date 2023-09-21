@@ -31,6 +31,8 @@ def is_odd(in_num):
         return False
 
 def is_prime(in_num):
+    if in_num == 0 or in_num == 1:
+        return False
     count = 0
     for i in range(2, in_num // 2 + 1):
         if (in_num % i == 0):
@@ -47,7 +49,7 @@ def filter_numbers(numbers, filter_type):
     (выбор производится передачей дополнительного аргумента)
 
     >>> filter_numbers([1, 2, 3], ODD)
-    <<< [1, 3]
+    [1, 3]
     >>> filter_numbers([2, 3, 4, 5], EVEN)
     <<< [2, 4]
     """
