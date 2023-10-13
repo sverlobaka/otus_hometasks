@@ -5,8 +5,8 @@ from homework_02.base import Vehicle
 from homework_02.exceptions import CargoOverload
 
 class Plane(Vehicle):
-    max_cargo = None
     cargo = None
+    max_cargo = None
 
 
     def __init__(self, max_cargo, weight=0, fuel=0, fuel_consumption=0):
