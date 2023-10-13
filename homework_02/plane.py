@@ -15,7 +15,13 @@ class Plane(Vehicle):
 
     def load_cargo(self, add_cargo):
         new_cargo = self.cargo + add_cargo
+        old_cargo = self.cargo
         if new_cargo > self.max_cargo:
             raise CargoOverload('перегруз')
         else:
             self.cargo = new_cargo
+
+    def remove_all_cargo(self):
+        prev_cargo = self.cargo
+        self.cargo = 0
+        return prev_cargo
